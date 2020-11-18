@@ -4,7 +4,8 @@
 
 The cfn template will created below resources 
 
-2) 3 Lambda functions(select,upsert,delete) Lambda layer to send all the lambda access log to particular log stream. 
+1) DynamoDD table with (key: UserId sort-key: Department)
+2) 3 NodeJS Lambda functions(select,upsert,delete) which does dynamoDB SDK operations and Lambda layer to send the access log to custom log-stream. 
 3) rest-api with 3 resource method 
 
       1) select(GET) -> Integerated with Lambda  -> DynamoDB table (does `select` Item)
