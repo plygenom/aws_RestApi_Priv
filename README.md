@@ -1,6 +1,17 @@
 # Making AWS RestAPI private and secure
 ![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/RestApi_Private.jpg?raw=true)
-# Docker Image build
+# Cloudformation tempalte 
+
+The cfn template will created below resources 
+
+2) 3 Lambda functions(select,upsert,delete) Lambda layer to send all the lambda access log to particular log stream. 
+3) rest-api with 3 resource method 
+
+      1) select(GET) -> Integerated with Lambda  -> DynamoDB table (does `select` Item)
+      2) upsert(POST) -> Integerated with Lambda proxy -> DynamoDB table (does `Insert and Update` Item)
+      3) delete(POST) -> Integerated with Lambda proxy -> DynamoDB table (does `delete` Item)
+
+2) IAM role with a limited policy to allow access only to dynamoDB table and cloudwatch log group  
 
 ```powershell
 git clone <<repo>>
@@ -10,12 +21,10 @@ docker build -t sample_node:latest .
 docker images --filter=reference='sample*'
 ```
 
-## To run locally 
+## Pre-Req
 
-```
-docker run -d -p 80:8080 sample_node:latest
-```
-verify from browser via `http://localhost/`
+1) Create gateway endpoint for AWS dynamoDB services and attach a policy 
+2) Create interface endpoint for AWS API Gateway services and attach security group 
 
 # Publish the image to **private registry**
 
