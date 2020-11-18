@@ -1,6 +1,5 @@
 # Making AWS RestAPI private and secure
-Sample node application using docker.
-
+![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/RestApi_Private.jpg?raw=true)
 # Docker Image build
 
 ```powershell
