@@ -26,6 +26,8 @@ docker images --filter=reference='sample*'
 
 1) Create gateway endpoint for AWS dynamoDB services and attach a policy 
 2) Create interface endpoint for AWS API Gateway services and attach security group 
+3) `aws ec2 describe-prefix-lists` get  prefixlist and private IP range of your VPC and update cfn mappings
+4) Updated S3 details of lambda function code in cfn mappings section  
 
 # Publish the image to **private registry**
 
