@@ -29,9 +29,10 @@ docker images --filter=reference='sample*'
 3) `aws ec2 describe-prefix-lists` get  prefixlist and private IP range of your VPC and update cfn mappings
 4) Updated S3 details of lambda function code in cfn mappings section  
 
-# Publish the image to **private registry**
+# Deploy the cloudformation code **private registry**
 
-Example: To publish the builded image to AWS ECR repo.
+
+![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/RestApi_Private.jpg?raw=true)
 
 ```powershell
 *** pre Req***
