@@ -33,7 +33,9 @@ copy `PrivateApi.yaml` to local
 
 ![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/cfn.png?raw=true)
 
-3) Once 
+3) Once template creation is succesfull it will create all the required resources like DynamoDB, API Gateway, Lamnda functions, IAM role,policy, SG etc.,
+
+![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/cfn.png?raw=true)
 
 ```powershell
 *** pre Req***
