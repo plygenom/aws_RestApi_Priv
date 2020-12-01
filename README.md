@@ -32,7 +32,7 @@ docker images --filter=reference='sample*'
 # Deploy the cloudformation code **private registry**
 
 
-![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/RestApi_Private.jpg?raw=true)
+![alt text](https://github.com/plygenom/aws_RestApi_Priv/blob/main/cfn.png?raw=true)
 
 ```powershell
 *** pre Req***
